@@ -10,8 +10,12 @@ syn cluster fbCommentGrp contains=fbTodo
 syn keyword fbSyntax include namespace attribute root_type
 syn keyword fbTypeDef enum
 syn keyword fbTypeDecl union struct table
-syn keyword fbFieldType bool byte ubyte short ushort int uint float long ulong
-syn keyword fbFieldType double string
+syn keyword fbFieldType bool byte int8 ubyte uint8
+syn keyword fbFieldType short int16 ushort uint16
+syn keyword fbFieldType int int32 uint uint32
+syn keyword fbFieldType long int64 ulong uint64
+syn keyword fbFieldType float float32 double float64
+syn keyword fbFieldType string
 syn keyword fbBool true false
 
 syn region fbComment start="//" skip="\\$" end="$" keepend contains=@fbCommentGrp
